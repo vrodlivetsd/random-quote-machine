@@ -1,0 +1,95 @@
+$break-small: 320px;
+$break-medium: 640px;
+$break-large: 1200px;
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    
+    .quotesBox {
+        height: fit-content;
+        width: fit-content;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        padding: 2em;
+        border-radius: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .quote {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1em;
+
+            .quoteIcon {
+                zoom: 2;
+
+                @media screen and (max-width: $break-medium) {
+                    zoom: 1.5;
+                }
+
+                @media screen and (max-width: $break-small) {
+                    zoom: 1;
+                }
+            }
+
+            span {
+                font-size: 32px;
+
+                @media screen and (max-width: $break-medium) {
+                    font-size: 24px;
+                }
+
+                @media screen and (max-width: $break-small) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .author {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2em;
+
+            span {
+                font-size: 24px;
+
+                @media screen and (max-width: $break-medium) {
+                    font-size: 18px;
+                }
+
+                @media screen and (max-width: $break-small) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+
+            .newQuoteBtn {
+                outline: none;
+                border: none;
+                padding: 1em;
+                border-radius: 4px;
+                color: white;
+                font-size: 14px;
+            }
+
+            .tweetBtn {
+                width: 26px;
+                outline: none;
+                border: none;
+                padding: 0 0.5em;
+                height: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+}
